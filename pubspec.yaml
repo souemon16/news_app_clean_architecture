@@ -33,6 +33,7 @@ dependencies:
   flutter_hooks: ^0.18.6
   # to save image in cache  
   cached_network_image: ^3.2.3
+  dio: ^5.2.1+1
 
   
 
