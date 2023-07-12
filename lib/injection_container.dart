@@ -8,7 +8,10 @@ import 'package:news_app_cln_arch/features/daily_news/domain/usecases/get_articl
 import 'package:news_app_cln_arch/features/daily_news/domain/usecases/get_saved_article_usecase.dart';
 import 'package:news_app_cln_arch/features/daily_news/domain/usecases/remove_article_usecase.dart';
 import 'package:news_app_cln_arch/features/daily_news/domain/usecases/save_article_usecase.dart';
-import 'package:news_app_cln_arch/features/daily_news/presentation/bloc/article/bloc/remote_article_bloc.dart';
+import 'package:news_app_cln_arch/features/daily_news/presentation/bloc/article/local/local_article_bloc.dart';
+
+import 'features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
+
 
 final sl = GetIt.instance;
 
@@ -32,4 +35,6 @@ Future<void> initializeDependencies() async {
 
   // Bloc 
   sl.registerFactory<RemoteArticleBloc>(() => RemoteArticleBloc(sl()));
+
+  sl.registerFactory<LocalArticleBloc>(() => LocalArticleBloc(sl(), sl(), sl()));
 }

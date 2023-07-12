@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app_cln_arch/features/daily_news/presentation/bloc/article/bloc/remote_article_bloc.dart';
+
+import '../../bloc/article/remote/remote_article_bloc.dart';
 
 
 class DailyNews extends StatelessWidget {
